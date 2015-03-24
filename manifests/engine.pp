@@ -132,10 +132,10 @@ class ovirt::engine (
   if $manage_postgresql_server {
     $postgres_provisioning_enabled = false
 
-    class { 'postgresql::server':
-      manage_firewall => $manage_firewall,
-      before          => $postgresql_server_before,
-    }
+    #class { 'postgresql::server':
+    #  manage_firewall => $manage_firewall,
+    #  before          => $postgresql_server_before,
+    #}
 
     postgresql::server::config_entry { 'max_connections':
       value => 150,
