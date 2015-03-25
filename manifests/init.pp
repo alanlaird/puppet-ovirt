@@ -21,7 +21,7 @@ class ovirt (
   $ovirt_release_url          = $ovirt::params::ovirt_release_url
 ) inherits ovirt::params {
 
-  validate_re($release_version, [ '^34$' ], 'Only release_version 34 is supported')
+  #validate_re($release_version, [ '^34$' ], 'Only release_version 34 is supported')
 
   include epel
 
